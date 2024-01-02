@@ -79,7 +79,7 @@ int main(int argc, char * argv[])
   node->declare_parameter<int>("baud_rate", baud_rate);
   node->get_parameter("bau_rate", baud_rate);
 
-  std::string frame_id = "LDDS006";
+  std::string frame_id = "LDS";
   node->declare_parameter<std::string>("frame_id",frame_id);
   node->get_parameter("frame_id",frame_id);
 
@@ -110,6 +110,8 @@ int main(int argc, char * argv[])
       // motor_pub->publish(rpms);
 
     }
+
+    laser.stop();
     laser.close();
     return 0;
   } catch (...) {
