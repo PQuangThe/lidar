@@ -32,7 +32,7 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *********************************************************************/
 
-#include "../include/my_package/xv11_laser.h"
+#include "../include/lidar/xv11_laser.h"
 
 namespace xv_11_driver {
 

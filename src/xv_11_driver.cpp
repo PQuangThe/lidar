@@ -54,7 +54,7 @@
 #include "rclcpp/time_source.hpp"
 
 // Make files need to change to support project include in a clean way
-#include "../include/my_package/xv11_laser.h"
+#include "../include/lidar/xv11_laser.h"
 
 #include <std_msgs/msg/string.hpp>
 #include <sensor_msgs/msg/laser_scan.hpp>
