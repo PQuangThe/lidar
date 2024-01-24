@@ -41,14 +41,14 @@ namespace xv_11_driver {
     serial_.set_option(boost::asio::serial_port_base::baud_rate(baud_rate_));
   }
   void XV11Laser::start(){
-	  std::string str="startlds$";
+	  std::string str="$startlds$";
 
-	  boost::asio::write(serial_,boost::asio::buffer(str,9));
+	  boost::asio::write(serial_,boost::asio::buffer(str,10));
   }
   void XV11Laser::stop(){
-	  std::string str="stoplds$";
+	  std::string str="$stoplds$";
 
-	  boost::asio::write(serial_,boost::asio::buffer(str,8));
+	  boost::asio::write(serial_,boost::asio::buffer(str,9));
   }
 
   void XV11Laser::poll(sensor_msgs::msg::LaserScan *scan) {

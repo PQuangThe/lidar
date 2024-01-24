@@ -79,7 +79,7 @@ int main(int argc, char * argv[])
   node->declare_parameter<int>("baud_rate", baud_rate);
   node->get_parameter("bau_rate", baud_rate);
 
-  std::string frame_id = "LDS";
+  std::string frame_id = "laser_frame";
   node->declare_parameter<std::string>("frame_id",frame_id);
   node->get_parameter("frame_id",frame_id);
 
@@ -113,13 +113,9 @@ int main(int argc, char * argv[])
 
     laser.stop();
     laser.close();
-    return 0;
   } catch (...) {
     RCLCPP_ERROR(node->get_logger(), "Error instantiating laser object. Check correct port and baud rate!");
-    return -1;
   }
 
-
   rclcpp::shutdown();
-  return 0;
 }
